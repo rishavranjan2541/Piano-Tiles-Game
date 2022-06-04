@@ -1,6 +1,6 @@
 
 const squares = document.querySelectorAll('.square')
-const mole = document.querySelector('.mole')
+const blue = document.querySelector('.blue')
 const timeLeft = document.querySelector('#time-left')
 const score = document.querySelector('#score')
 
@@ -16,13 +16,14 @@ let countDownb = 0
 let timerId2
 // let happnSquare = []
 
+alert("Press OK to start, and refresh the page to restart")
 function randomSquare() {
   squares.forEach(square => {
-    square.classList.remove('mole')
+    square.classList.remove('blue')
   })
   
   let randomSquare = squares[Math.floor(Math.random() * 9)]
-  randomSquare.classList.add('mole')
+  randomSquare.classList.add('blue')
 
 
   hitPosition = randomSquare.id
@@ -31,13 +32,13 @@ function randomSquare() {
 
 function randomSquare2() {
   squares.forEach(square => {
-    square.classList.remove('mole')
+    square.classList.remove('blue')
   })
   
   let randomSquarea= squares[Math.floor(Math.random() * 9)]
-  randomSquarea.classList.add('mole')
+  randomSquarea.classList.add('blue')
   let randomSquareb = squares[Math.floor(Math.random() * 9)]
-  randomSquareb.classList.add('mole')
+  randomSquareb.classList.add('blue')
 
 
   hitPosition2a = randomSquarea.id
