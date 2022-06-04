@@ -5,11 +5,11 @@ const timeLeft = document.querySelector('#time-left')
 const score = document.querySelector('#score')
 
 let result = 0
-let hitPosition = squares[10].id
+let hitPosition
 let hitPosition2a
 let hitPosition2b
-let currentTime = 10
-let currentTime2 = 10
+let currentTime = 60
+let currentTime2 = 60
 let timerId = null
 let round1 = false
 let countDownb = 0
@@ -26,7 +26,7 @@ function randomSquare() {
 
 
   hitPosition = randomSquare.id
-  console.log(randomSquare);
+//   console.log(randomSquare);
 }
 
 function randomSquare2() {
@@ -57,7 +57,7 @@ squares.forEach(square => {
     else {
       clearInterval(countDownTimerId)
       clearInterval(timerId)
-      alert("GAME OVER!")
+      alert("GAME OVER!,with Score"+result)
       if (round1 == true) {
       //  alert(countDownb)
        clearInterval(countDownb)
@@ -69,7 +69,7 @@ squares.forEach(square => {
 })
 
 function moveMole() {
-  timerId = setInterval(randomSquare, 1500)
+  timerId = setInterval(randomSquare, 1000)
 }
 
 function moveMole2() {
